@@ -99,7 +99,5 @@ def update_alumno(no_control):
     db.session.commit()
     return jsonify ({ 'msg':'Alumno actualizado correctamente'})
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
