@@ -25,6 +25,10 @@ class Alumno(db.Model):
     ap_materno = db.Column(db.String)
     semestre = db.Column(db.Integer)
 
+# Crear las tablas si no existen
+with app.app_context():
+    db.create_all()
+    
 #endpoint para obtener todos los alumnos
 @app.route('/alumnos', methods=['GET'])
 def get_alumnos():
